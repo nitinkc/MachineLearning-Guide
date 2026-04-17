@@ -56,7 +56,6 @@ jobs:
 
       - name: Build MkDocs site
         run: mkdocs build --clean
-        # --strict removed: avoids version-sensitive warning→error differences between local and CI
         # Output goes to ./site/
 
       - name: Upload Pages artifact
