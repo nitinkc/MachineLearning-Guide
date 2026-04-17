@@ -1,0 +1,84 @@
+site_name: Machine Learning & Deep Learning Guide
+site_description: A comprehensive learning portal covering ML fundamentals, neural networks, deep learning architectures, and mathematical foundations for AI development.
+site_author: Architecture Learning Series
+
+theme:
+  name: mkdocs
+  color_mode: auto
+  user_color_mode_toggle: true
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - python
+    - javascript
+    - bash
+    - sql
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: docs
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - abbr
+  - pymdownx.arithmatex:
+      generic: true
+  - docs_extensions:  # Custom extension for Mermaid
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+  - js/mermaid-init.js
+  - js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/mathjax-dark-mode.js
+  - js/tooltips.js
+
+extra_css:
+  - css/myCss.css
+  - css/dark-theme.css
+
+nav:
+  - Home: index.md
+  - Foundations:
+    - "00 · ML & DL Fundamentals": 00-ml-fundamentals.md
+    - "00.01 · Supervised vs Unsupervised Learning": 00.01-supervised-unsupervised.md
+    - "00.02 · Core Concepts": 00.02-core-concepts.md
+  - Neural Networks:
+    - "01 · Neural Network Basics": 01-neural-networks.md
+    - "01.01 · Perceptrons & Activation Functions": 01.01-perceptrons-activation.md
+    - "01.02 · Backpropagation Deep Dive": 01.02-backpropagation.md
+  - Deep Learning Architectures:
+    - "02 · Deep Learning Overview": 02-deep-learning-overview.md
+    - "02.01 · Convolutional Neural Networks": 02.01-cnn.md
+    - "02.02 · Recurrent Neural Networks": 02.02-rnn.md
+    - "02.03 · Transformer Architecture": 02.03-transformer.md
+  - Advanced Topics:
+    - "03 · Optimization & Training": 03-optimization-training.md
+    - "03.01 · Regularization & Generalization": 03.01-regularization.md
+    - "03.02 · Transfer Learning & Pre-training": 03.02-transfer-learning.md
+  - Embeddings & Representation:
+    - "04 · Word Embeddings": 04-word-embeddings.md
+    - "04.01 · Word2Vec, GloVe, FastText": 04.01-embedding-models.md
+  - Practical Guide:
+    - "05 · ML Pipeline in Practice": 05-ml-pipeline.md
+    - "05.01 · Data Preprocessing": 05.01-data-preprocessing.md
+    - "05.02 · Feature Engineering": 05.02-feature-engineering.md
+  - Reference:
+    - "06 · Mathematical Reference": 06-math-reference.md
+    - "07 · Interview Q&A": 07-interview.md
+

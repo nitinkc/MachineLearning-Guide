@@ -1,0 +1,90 @@
+/* Custom CSS for ML/DL Guide */
+
+/* Code highlighting */
+code {
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Tables styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table td {
+  padding: 0.75em;
+  border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Admonitions */
+.admonition {
+  border-left: 4px solid #5c6ac4;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f8f9fa;
+  border-radius: 3px;
+}
+
+.admonition.note {
+  border-left-color: #0366d6;
+}
+
+.admonition.warning {
+  border-left-color: #ffc107;
+}
+
+.admonition.tip {
+  border-left-color: #28a745;
+}
+
+/* Math formulas */
+.arithmatex {
+  text-align: center;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+/* Mermaid diagrams */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+/* Abbreviations and tooltips */
+abbr {
+  border-bottom: 2px dotted #0366d6;
+  cursor: help;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+abbr:hover {
+  border-bottom-color: #d73a49;
+}
+
+/* Tooltip styling */
+#abbr-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
+  z-index: 9999;
+}
+

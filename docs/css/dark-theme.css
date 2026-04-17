@@ -1,0 +1,435 @@
+/* Dark Theme CSS for ML/DL Guide */
+/* Optimized for dark mode with proper contrast and visibility */
+
+/* ============================================================ */
+/* Dark Theme Color Palette */
+/* ============================================================ */
+
+:root[data-bs-theme="dark"] {
+  /* Background colors */
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #282a36;
+  --bg-tertiary: #44475a;
+
+  /* Text colors */
+  --text-primary: #f8f9fa;
+  --text-secondary: #cdd6f4;
+  --text-muted: #a8adc6;
+
+  /* Accent colors */
+  --accent-blue: #89b4fa;
+  --accent-purple: #cba6f7;
+  --accent-red: #f38ba8;
+  --accent-green: #a6e3a1;
+  --accent-yellow: #f9e2af;
+
+  /* Borders */
+  --border-color: #44475a;
+  --border-light: #6c7086;
+}
+
+/* ============================================================ */
+/* Base Dark Theme Overrides */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ============================================================ */
+/* Math Equations (MathJax) - CRITICAL FIX */
+/* ============================================================ */
+
+/* Container for math equations */
+body[data-bs-theme="dark"] .arithmatex {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary);
+  padding: 0.25em 0.5em;
+  margin: 0.2em 0;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+/* Block-level math (display math with $$) */
+body[data-bs-theme="dark"] div.arithmatex {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent-blue);
+}
+
+/* MathJax container - JavaScript will apply filters */
+body[data-bs-theme="dark"] mjx-container {
+  display: inline-block;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* MathJax SVG - ensure transparent background */
+body[data-bs-theme="dark"] mjx-container svg {
+  background: transparent !important;
+  max-width: 100%;
+}
+
+/* Inline math (within text) */
+body[data-bs-theme="dark"] code.arithmatex {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Ensure math expressions don't get styled as code */
+body[data-bs-theme="dark"] .arithmatex code {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+
+/* ============================================================ */
+/* Mermaid Diagrams - CRITICAL FIX */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] .mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 2em;
+  margin: 2em 0;
+  overflow-x: auto;
+}
+
+/* Mermaid SVG styling */
+body[data-bs-theme="dark"] .mermaid svg {
+  background: transparent !important;
+}
+
+/* Mermaid text styling */
+body[data-bs-theme="dark"] .mermaid text {
+  fill: var(--text-primary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Mermaid edges and paths */
+body[data-bs-theme="dark"] .mermaid path,
+body[data-bs-theme="dark"] .mermaid line,
+body[data-bs-theme="dark"] .mermaid polygon {
+  stroke: var(--accent-blue) !important;
+  fill: transparent !important;
+}
+
+/* Mermaid nodes */
+body[data-bs-theme="dark"] .mermaid rect,
+body[data-bs-theme="dark"] .mermaid circle,
+body[data-bs-theme="dark"] .mermaid ellipse {
+  stroke: var(--accent-blue) !important;
+  fill: var(--bg-tertiary) !important;
+  stroke-width: 2px !important;
+}
+
+/* Mermaid arrows */
+body[data-bs-theme="dark"] .mermaid marker {
+  fill: var(--accent-blue) !important;
+}
+
+/* Mermaid labels and titles */
+body[data-bs-theme="dark"] .mermaid .labelBox {
+  background-color: var(--bg-tertiary) !important;
+  stroke: var(--accent-blue) !important;
+}
+
+/* Mermaid cluster styling */
+body[data-bs-theme="dark"] .mermaid .cluster {
+  stroke: var(--accent-purple) !important;
+  fill: var(--bg-tertiary) !important;
+}
+
+/* Mermaid cluster title */
+body[data-bs-theme="dark"] .mermaid .cluster text {
+  fill: var(--accent-purple) !important;
+}
+
+/* ============================================================ */
+/* Code Blocks - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] code {
+  background-color: var(--bg-secondary);
+  color: var(--accent-green);
+  border: 1px solid var(--border-color);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+body[data-bs-theme="dark"] pre {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+body[data-bs-theme="dark"] pre code {
+  background-color: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0;
+}
+
+/* ============================================================ */
+/* Tables - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+  border: 1px solid var(--border-color);
+}
+
+body[data-bs-theme="dark"] table th {
+  background-color: var(--bg-tertiary);
+  color: var(--accent-blue);
+  font-weight: 600;
+  padding: 0.75em;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+body[data-bs-theme="dark"] table td {
+  padding: 0.75em;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+body[data-bs-theme="dark"] table tr:nth-child(even) {
+  background-color: rgba(68, 71, 90, 0.3);
+}
+
+body[data-bs-theme="dark"] table tr:hover {
+  background-color: rgba(68, 71, 90, 0.5);
+}
+
+/* ============================================================ */
+/* Admonitions - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] .admonition {
+  border-left: 4px solid var(--accent-blue);
+  background-color: rgba(139, 180, 250, 0.1);
+  color: var(--text-primary);
+  margin: 1.5em 0;
+  padding: 1em;
+  border-radius: 4px;
+}
+
+body[data-bs-theme="dark"] .admonition.note {
+  border-left-color: var(--accent-blue);
+  background-color: rgba(139, 180, 250, 0.08);
+}
+
+body[data-bs-theme="dark"] .admonition.warning {
+  border-left-color: var(--accent-yellow);
+  background-color: rgba(249, 226, 175, 0.08);
+}
+
+body[data-bs-theme="dark"] .admonition.warning .admonition-title {
+  color: var(--accent-yellow);
+}
+
+body[data-bs-theme="dark"] .admonition.tip {
+  border-left-color: var(--accent-green);
+  background-color: rgba(166, 227, 161, 0.08);
+}
+
+body[data-bs-theme="dark"] .admonition.tip .admonition-title {
+  color: var(--accent-green);
+}
+
+body[data-bs-theme="dark"] .admonition.warning code,
+body[data-bs-theme="dark"] .admonition.tip code,
+body[data-bs-theme="dark"] .admonition.note code {
+  background-color: var(--bg-secondary);
+  color: var(--accent-blue);
+  border-color: var(--border-light);
+}
+
+/* ============================================================ */
+/* Abbreviations & Tooltips - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] abbr {
+  border-bottom: 2px dotted var(--accent-blue);
+  cursor: help;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--accent-blue);
+}
+
+body[data-bs-theme="dark"] abbr:hover {
+  border-bottom-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+body[data-bs-theme="dark"] #abbr-tooltip {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text-primary) !important;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================ */
+/* Links - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body[data-bs-theme="dark"] a:hover {
+  color: var(--accent-purple);
+  text-decoration: underline;
+}
+
+/* ============================================================ */
+/* Blockquotes - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] blockquote {
+  border-left: 4px solid var(--accent-blue);
+  color: var(--text-secondary);
+  margin: 1em 0;
+  padding-left: 1em;
+  background-color: rgba(139, 180, 250, 0.05);
+  padding: 1em;
+  border-radius: 4px;
+}
+
+/* ============================================================ */
+/* Headers - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] h1,
+body[data-bs-theme="dark"] h2,
+body[data-bs-theme="dark"] h3,
+body[data-bs-theme="dark"] h4,
+body[data-bs-theme="dark"] h5,
+body[data-bs-theme="dark"] h6 {
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+body[data-bs-theme="dark"] h1 {
+  color: var(--accent-blue);
+  border-bottom: 2px solid var(--accent-blue);
+}
+
+body[data-bs-theme="dark"] h2 {
+  color: var(--accent-purple);
+  border-bottom: 2px solid var(--accent-purple);
+}
+
+body[data-bs-theme="dark"] h3 {
+  color: var(--accent-green);
+}
+
+/* ============================================================ */
+/* Horizontal Rules - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] hr {
+  border: none;
+  border-top: 2px solid var(--border-light);
+  margin: 2em 0;
+}
+
+/* ============================================================ */
+/* Selection - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] ::selection {
+  background-color: rgba(139, 180, 250, 0.3);
+  color: var(--text-primary);
+}
+
+body[data-bs-theme="dark"] ::-moz-selection {
+  background-color: rgba(139, 180, 250, 0.3);
+  color: var(--text-primary);
+}
+
+/* ============================================================ */
+/* Details/Summary (Collapsible) - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] details {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--bg-secondary);
+}
+
+body[data-bs-theme="dark"] details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-blue);
+  user-select: none;
+  padding: 0.5em;
+  margin: -0.5em -0.5em 0.5em -0.5em;
+  padding-left: 1.5em;
+}
+
+body[data-bs-theme="dark"] details summary:hover {
+  color: var(--accent-purple);
+}
+
+/* ============================================================ */
+/* Lists - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] ul,
+body[data-bs-theme="dark"] ol {
+  color: var(--text-secondary);
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+body[data-bs-theme="dark"] li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+/* ============================================================ */
+/* Emphasis and Strong - Dark Theme */
+/* ============================================================ */
+
+body[data-bs-theme="dark"] strong {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+body[data-bs-theme="dark"] em {
+  color: var(--accent-purple);
+  font-style: italic;
+}
+
