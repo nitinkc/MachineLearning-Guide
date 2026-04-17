@@ -47,13 +47,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Debug — print versions & theme
-        run: |
-          mkdocs --version
-          python -c "import mkdocs; print('mkdocs path:', mkdocs.__file__)"
-          python -c "import mkdocs.config.defaults as d; print('theme entry points available')"
-          pip list | grep -iE "mkdocs|material|bootswatch"
-
       - name: Build MkDocs site
         run: mkdocs build --clean
         # Output goes to ./site/
@@ -82,7 +75,5 @@ jobs:
 
       - name: Print live site URL
         run: |
-          echo "━━━━━━━━━��━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "  ✅ Deployment complete!"
-          echo "  🌐 Live URL: ${{ steps.deployment.outputs.page_url }}"
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "✅ Deployment complete!"
+          echo "🌐 Live URL: ${{ steps.deployment.outputs.page_url }}"
